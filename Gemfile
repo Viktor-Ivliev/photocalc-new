@@ -24,7 +24,11 @@ gem 'devise'
 
 gem "paperclip", "~> 4.1"
 
-group :development do
+group :development, :test do
+  gem 'minitest'
   gem 'pry-nav'
   gem 'quiet_assets'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'database_cleaner', '~> 1.3.0'
 end
