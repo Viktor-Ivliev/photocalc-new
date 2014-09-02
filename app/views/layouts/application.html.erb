@@ -42,7 +42,7 @@
 
 		<%= yield %>
 
- 	<%= render OrderDate.all %>
+ 	<%= render partial: 'order_dates/order_date', collection: OrderDate.all %>
 
 	<!--heder-->
 	<div class="heder_level_1">
