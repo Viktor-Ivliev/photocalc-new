@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820135817) do
+ActiveRecord::Schema.define(version: 20140902131611) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,25 @@ ActiveRecord::Schema.define(version: 20140820135817) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "editions", force: true do |t|
+    t.integer  "min_pages"
+    t.integer  "max_pages"
+    t.integer  "step"
+    t.integer  "min_edition"
+    t.integer  "max_edition"
+    t.integer  "format_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "formats", force: true do |t|
+    t.string   "title"
+    t.string   "photo"
+    t.integer  "printing_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "order_dates", force: true do |t|
     t.text     "date"
@@ -51,6 +70,13 @@ ActiveRecord::Schema.define(version: 20140820135817) do
     t.integer  "min_num_pages"
     t.integer  "step_pages"
     t.integer  "max_num_pages"
+  end
+
+  create_table "printing_types", force: true do |t|
+    t.string   "title"
+    t.string   "photo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
