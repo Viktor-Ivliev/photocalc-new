@@ -24,4 +24,7 @@ gem 'devise'
 
 gem "paperclip", "~> 4.1"
 
-gem 'pry-nav', group: :development
+group :development do
+  gem 'pry-nav'
+  gem 'quiet_assets'
+end

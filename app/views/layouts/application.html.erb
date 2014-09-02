@@ -42,15 +42,7 @@
 
 		<%= yield %>
 
-	<% OrderDate.all.each do |order_date| %>
-		<div class="order-date">
-			<%= order_date.info %>
-			<div class="color-date">
-      		<%= order_date.date %>
-      		</div>
-    	</div>
-	<% end %>
-
+ 	<%= render OrderDate.all %>
 
 	<!--heder-->
 	<div class="heder_level_1">

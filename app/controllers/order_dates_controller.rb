@@ -9,7 +9,6 @@ class OrderDatesController < ApplicationController
   def update
     if @order_date.update(order_date_params)
       redirect_to new_price_path
-    
     else
       render :edit
     end
