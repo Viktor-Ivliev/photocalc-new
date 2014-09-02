@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_photo: MyString
+  type_paper: MyString
+  format: MyString
+  price1_4: 9.99
+  difference1_4: 9.99
+  price5_99: 9.99
+  difference5_99: 9.99
+
+two:
+  type_photo: MyString
+  type_paper: MyString
+  format: MyString
+  price1_4: 9.99
+  difference1_4: 9.99
+  price5_99: 9.99
+  difference5_99: 9.99

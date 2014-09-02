@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type photo:</strong>
+  <%= @price.type_photo %>
+</p>
+
+<p>
+  <strong>Type paper:</strong>
+  <%= @price.type_paper %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @price.format %>
+</p>
+
+<p>
+  <strong>Price1 4:</strong>
+  <%= @price.price1_4 %>
+</p>
+
+<p>
+  <strong>Difference1 4:</strong>
+  <%= @price.difference1_4 %>
+</p>
+
+<p>
+  <strong>Price5 99:</strong>
+  <%= @price.price5_99 %>
+</p>
+
+<p>
+  <strong>Difference5 99:</strong>
+  <%= @price.difference5_99 %>
+</p>
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

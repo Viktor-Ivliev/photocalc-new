@@ -1,0 +1,253 @@
+
+
+.checkbox_none {
+	display: none;
+}
+
+.form_calculator{
+	padding-left: 20px;
+	-moz-user-select: -moz-none;
+  	-o-user-select: none;
+  	-khtml-user-select: none;
+  	-webkit-user-select: none;
+  	user-select: none;
+  	padding-top: 15px;
+  	padding-right: 0px;
+  	margin-right: -4%; 
+
+	
+}
+
+.field{
+	margin-bottom: 25px !important;
+
+}
+
+#calc_photo, #calc_format, .backgraund_paper_and_num{
+	background: #fff;
+	width: 95%;
+	padding-left: 30px;
+	margin-left: 0%;
+	border-color: red;
+	border-width: 1px;
+	border-style: solid;
+
+	-webkit-box-shadow: 1px 8px 14px -1px rgba(146, 0, 0, 0.85);
+	-moz-box-shadow:    1px 8px 14px -1px rgba(146, 0, 0, 0.85);
+	box-shadow:         1px 8px 14px -1px rgba(146, 0, 0, 0.85);
+	/*display: table-cell;*/
+
+	hr{
+		margin: 5px;
+		height: 5px;
+  	}
+}
+
+#calc_photo{
+	height: 170px;
+}
+
+
+.format_label, .photo_label, .paper_label, .number_of_turns_label, .field_number_label{
+	text-align: center;
+	font-family: 'Comic Sans MS', cursive;
+	font-size: 1.75em;
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	padding-top: 3px;
+}
+
+
+.format_label{
+	margin: 10px;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 900;
+
+}
+
+.photo_label{
+	margin: 10px auto 10px;
+	width: 25%;
+	height: 140px;
+	display: inline-block;
+	margin-left: 10px;
+	padding-bottom: 15px;
+	margin-right: 7%;
+
+	.photo_img{
+		height: 110px;
+	}
+}
+
+.paper_label{
+	display: inline-block;
+	margin-right: 25px;
+	padding: 10px 5px;
+	background: #FFFA84;
+	font-size: 1.3em;
+}
+
+#calc_number_of_turns, #calc_number{
+	height: 45px ;
+	width: 100px ;
+	text-align: center;
+	font-size: 2.3em;
+	width: 150px;
+	margin-left: 6%;
+	font-weight: 900;
+	background: #FFFA84;
+}
+
+.format_img, .photo_img{
+	display: block;
+	border-color: #070707;
+	border-width: 1.5px;
+	border-style: dashed;
+	margin: 2px;
+
+
+}
+
+
+#calc_paper{
+	margin-top: 11px !important;
+}
+
+.number_of_turns_label{
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+
+
+
+
+.paper_label:hover, .photo_label:hover, .format_label:hover{
+	-webkit-box-shadow: 0px 0px 22px 2px rgba(255, 238, 2, 0.64) !important;
+	-moz-box-shadow:    0px 0px 22px 2px rgba(255, 238, 2, 0.64) !important;
+	box-shadow:         0px 0px 22px 2px rgba(255, 238, 2, 0.64) !important;
+
+}
+
+
+
+.calc_format:checked + .format_label, .calc_format:checked + .photo_label, .calc_paper:checked + .paper_label {
+	color: #FF0000;
+	text-shadow: 0px 1px 5px #FFF;
+	/*border-radius: 5px;
+	border: 4px solid #FF5C00;*/
+	-webkit-box-shadow: 0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+	-moz-box-shadow:    0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+	box-shadow:         0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+	.format_img, .photo_img{
+		border-color: red !important;
+		border-width: 1.5px;
+		border-style: dashed;
+	}
+}	
+
+
+.forms{
+	font-weight:bold;
+	padding-bottom: 5px;
+	font-size: 18px;
+}
+
+
+
+
+input{
+	min-height: 30px;
+}
+
+.field_turns, .field_count, .field_paper{
+	display: inline-block;
+}
+
+.field_turns{
+	margin-left: 40px;
+
+}
+
+
+input:focus{
+	-webkit-box-shadow: 0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+	-moz-box-shadow:    0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+	box-shadow:         0px 0px 22px 2px rgba(255, 141, 12, 0.64) !important;
+}
+
+.calc h4{
+	color: ff5c00;
+	-webkit-border-bottom-right-radius: 38px;
+	border-bottom-right-radius: 38px;
+	-moz-border-radius-bottomleft: 38px;
+	-webkit-border-bottom-left-radius: 38px;
+	border-bottom-left-radius: 38px;
+	height: 50px;
+	margin-top: -5px;
+	margin-right: 20px;
+	background: beige;
+	text-align: -webkit-center;
+	padding-top: 15px;
+}
+
+
+.price{
+	color: #FF5c00;
+	display: inline-block;
+}
+
+.price_grin{
+	color: blue;
+	display: inline-block;
+	margin-top: 22px;
+}
+
+
+#calc{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 170px;
+	text-align: center;
+	margin-top: 8.2%;
+	margin-left: 82.7%;
+	width: 18%;
+	
+	background: rgb(230,240,163);
+	background: -moz-linear-gradient(top, rgba(230,240,163,1) 0%, rgba(210,230,56,1) 50%, rgba(195,216,37,1) 51%, rgba(219,240,67,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(230,240,163,1)), color-stop(50%,rgba(210,230,56,1)), color-stop(51%,rgba(195,216,37,1)), color-stop(100%,rgba(219,240,67,1)));
+	background: -webkit-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%);
+	background: -o-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%);
+	background: -ms-linear-gradient(top, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%);
+	background: linear-gradient(to bottom, rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 );
+	-webkit-box-shadow: 0px 9px 13px 0px rgba(210, 230, 56, 0.74);
+	-moz-box-shadow: 0px 9px 13px 0px rgba(210, 230, 56, 0.74);
+	box-shadow: 0px 9px 13px 0px rgba(210, 230, 56, 0.74);
+
+	
+	b{
+		font-family: Georgia, serif;
+		font-size: 1.3em;
+		font-weight: bold;
+		font-style: italic;
+		display: block;
+		padding-top: 7px;
+		line-height: 23px;
+		margin-bottom: -15px;
+	}
+
+	hr{
+		margin-bottom: 0px;
+		margin-top: 15px;
+	}
+}
+
+
+
+
+

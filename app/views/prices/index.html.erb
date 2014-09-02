@@ -1,0 +1,51 @@
+<div class="container">
+<%= link_to 'адміністрація', admin_session_path %>
+<div class="container">
+ <% @prices.each do |price| %>
+          Вид фотодруку:
+          <%= price.type_photo %><br>
+          Формат:
+          <%= price.format %><br>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2" class="price_up" >Ціна від 1 до 4 включно</th>
+        <th class="splan_width"></th>
+        <th colspan="2" class="price_down">Ціна від 5 до 99 включно</th>
+      </tr>
+      <th>к-сть розворотiв</th>
+      <th><%= price.type_paper %></th>
+      <th class="splan_width"></th>
+      <th>к-сть розворотiв</th>
+      <th><%= price.type_paper %></th>
+    </thead>
+
+    <tbody>
+      <% i=price.min_num_pages %>
+      <% pric1=price.price1_4 %>
+      <% pric2=price.price5_99 %>
+      <% while i < price.max_num_pages+1 %>
+        <tr>
+          <td class="center"><%= i %></td>
+          <td class="center"><%= sprintf("%0.02f грн.", pric1)
+ %></td>
+          <td class="splan_width"></td>
+          <td class="center"><%= i %></td>
+          <td class="center"><%= sprintf("%0.02f грн.", pric2)
+ %></td>
+        </tr>
+        <% i+=price.step_pages %>
+        <% pric1+=price.difference1_4 %>
+        <% pric2+=price.difference5_99 %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <br>
+<% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Price', new_price_path %>
+</div>

@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="form_calculator ">
+    <%= form_for :calc, url: result_calc_path do |f| %>
+
+      <div class="field">
+        <%= f.label "Вид фотодруку", class: "forms" %>
+        <div id="calc_photo" class="row one background_calc_element">
+          <% @pric = Price.select(:type_photo).distinct %>
+          <% checkeds = true %>
+          <% @pric.each do |fr| %>
+              <% if checkeds %>
+                <input type="radio" class="calc_format checkbox_none" id="my-checkbox<%= fr.type_photo %>" name="calc[photo]" value="<%= fr.type_photo %>" checked />
+                  <% checkeds = false %>
+              <% else %>
+                <input type="radio" class="calc_format checkbox_none" id="my-checkbox<%= fr.type_photo %>" name="calc[photo]" value="<%= fr.type_photo %>"/>
+              <% end %>
+
+              <label class="photo_label col-md-3" for="my-checkbox<%= fr.type_photo %>">
+                <img class="photo_img " src="/assets/print/<%= fr.type_photo %>.jpg">
+                  <%= fr.type_photo %>
+              </label>
+          <% end %>
+        </div>
+      </div>    
+     
+      <div class="field">
+        <%= f.label "Формат", class: "forms" %>
+        <div id="calc_format">
+        </div>
+      </div>
+
+      <div >
+        <%= f.label "Iнше", class: "forms" %>
+      </div> 
+
+      <div class="backgraund_paper_and_num">
+        <div class="field field_paper">
+          <div id="calc_paper">
+          </div>
+        </div> 
+     
+        <div class="field field_turns">
+          <%= f.label "К-сть розворотів", class: "forms number_of_turns_label" %>
+          <div id="number_field_number_of_turns">
+             <%#= f.number_field :number_of_turns, in: 1.0..99.0, value: 1 %>
+          </div>
+        </div>
+
+        <div class="field field_count">
+          <%= f.label "Тираж", class: "forms field_number_label" %>
+          <div id="number_field_number">
+            <%= f.number_field :number, in: 1.0..99.0,  value: 1 %>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%#расчет через контроллер %>
+        <%#= f.submit "Розрахувати", remote: true %>
+        <!--<div class="btn btn-default dropdown-toggle" id="calculate_cost">Розрахувати</div>-->
+      </div>
+
+    <% end %>
+    <div>
+      <div id="calc">
+        <%= render 'calc' %>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
