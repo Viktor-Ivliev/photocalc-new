@@ -15,9 +15,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
 gem 'execjs'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
@@ -27,5 +24,4 @@ gem 'devise'
 
 gem "paperclip", "~> 4.1"
 
-gem 'pry-nav'
-
+gem 'pry-nav', group: :development
