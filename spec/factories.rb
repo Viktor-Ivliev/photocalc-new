@@ -18,4 +18,12 @@ FactoryGirl.define do
     max_edition 4
   end
 
+  factory :edition_option do
+    paper_option 'с ламенированием'
+    price 107
+    difference 8
+  end
+
+  
+
 end

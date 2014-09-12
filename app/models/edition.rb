@@ -1,8 +1,12 @@
 class Edition < ActiveRecord::Base
 	belongs_to :format
+  has_many :edition_options
 
   def to_data
-    { caption: caption, data: pages_array }
+    { caption: caption, 
+      data: pages_array,
+      edition_option: edition_options.map(&:to_data)
+      }
   end
 
  private

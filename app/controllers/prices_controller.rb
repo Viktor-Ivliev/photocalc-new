@@ -4,6 +4,10 @@ class PricesController < ApplicationController
   # GET /prices
   def index
     @prices = Price.all
+    @format = Format.all
+    @printing_type = PrintingType.all
+    @edition = Edition.all
+    @edition_option = EditionOption.all
   end
 
   # GET /prices/1
@@ -17,6 +21,7 @@ class PricesController < ApplicationController
     if admin_signed_in?
       @prices = Price.all.order(:type_photo)
       @price = Price.new
+
     else
       redirect_to prices_path
     end

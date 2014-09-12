@@ -6,7 +6,8 @@ class Format < ActiveRecord::Base
     {
       title: title,
       photo: photo,
-      editions: editions.map(&:to_data)
+      editions: editions.map(&:to_data),
+      #edition_options: edition_options.map(&:to_data)
     }
   end
 end
