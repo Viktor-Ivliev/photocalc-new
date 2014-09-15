@@ -47,17 +47,16 @@
  <% @printing_type.each do |printing_type| %>
   <% formats = @format.where(printing_type_id: printing_type.id) %> 
     <% formats.each do |format| %>
-      <div>Вид фотодруку: <%= printing_type.title %></div>
-      <div><%= printing_type.photo %></div>
       <% editions = @edition.where(format_id: format.id) %>
-
       <% editions.each do |edition| %>
-        <div>Формат: <%= pformat.title %></div>
-        <div><%= format.photo %></div>
-
         <% edition_options = @edition_options.where(edition_id: edition.id) %>
         <% edition_options.each do |edition_option| %>
-          <table>
+            <% pric = edition_option.price%>
+            <div>Вид фотодруку: <%= printing_type.title %></div>
+            <div><%= printing_type.photo %></div>
+            <div>Формат: <%= pformat.title %></div>
+            <div><%= format.photo %></div>
+            <table>
             <thead>
               <tr>
                 <th colspan="2" class="price_up" >Ціна від <%= edition.min_edition %> до <%= edition.min_edition %></th>
@@ -65,16 +64,15 @@
               <th>к-сть розворотiв</th>
               <th><%= edition_option.paper_option %></th>
             </thead>
-
-            <% pric = edition_option.price%>
             <tbody>
 
               <% (edition.min_pages..edition.max_pages).step(edition.step).each do |i| %>
-                <tr>
-                  <td class="center"><%= i %></td>
-                  <td class="center"><%= sprintf("%0.02f грн.", pric)
-                  %></td>
-                </tr>
+              <tr>
+                <td class="center"><%= i %></td>
+                <td class="center"><%= sprintf("%0.02f грн.", pric)
+                  %>
+                </td>
+              </tr>
                 <% pric+=edition_option.difference %>
               <% end %>
             
@@ -82,8 +80,7 @@
             </table>
             <br>
             <br>
-          
-
+            
         <% end %>
 
       <% end %>
