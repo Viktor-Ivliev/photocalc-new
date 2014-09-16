@@ -13,7 +13,8 @@
   	user-select: none;
   	padding-top: 15px;
   	padding-right: 0px;
-  	margin-right: -4%; 
+  	margin-right: -4%;
+
 
 	
 }
@@ -106,6 +107,8 @@
 	border-width: 1.5px;
 	border-style: dashed;
 	margin: 2px;
+	width: 90%;
+	margin-left: 5%;
 
 
 }
@@ -145,6 +148,8 @@
 	.format_img, .photo_img{
 		border-color: red !important;
 		border-width: 1.5px;
+		width: 100%;
+		margin-left: auto;
 		border-style: dashed;
 	}
 }	

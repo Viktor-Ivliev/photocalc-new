@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   resources :prices
 
   devise_for :admins
-  root 'prices#index'
+  root 'landing_page#index'
 end
