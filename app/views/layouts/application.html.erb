@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
+  	
 </head>
 <body>
 
@@ -20,11 +21,12 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		          </button>
-		      <a class="navbar-brand style_brand" href="<%= landing_page_index_path%>">Kodak</a>
+		      
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<a class="navbar-brand style_brand" onClick="document.location='<%= landing_page_index_path%>'">Kodak</a>
 		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="<%= result_index_path %>">Ціни</a></li>
 		        <li><a class="not_active" href="<%= prices_path %>">Таблицы</a></li>
@@ -48,7 +50,7 @@
 	<div class="heder">
 		<div class="heder_level_1">
 			<div class="contact" >
-				Контактная информация<span>:</span>
+				<span>Контактная информация</span>
 				<div class="center_block">
 					<div class="contact_info">
 						E-mail:
@@ -73,9 +75,11 @@
 			</div>
 			
 		</div>
-		<div class="heder_level_2">
-			© 2014 Kodac.
-		</div>
 	</div>
+	<div class="heder_level_2">
+			© 2014 Kodac.
+	</div>
+
+
 </body>
 </html>
