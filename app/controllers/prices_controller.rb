@@ -8,6 +8,7 @@ class PricesController < ApplicationController
     @printing_type = PrintingType.all
     @edition = Edition.all
     @edition_option = EditionOption.all
+    @order_dates = OrderDate.all
   end
 
   # GET /prices/1

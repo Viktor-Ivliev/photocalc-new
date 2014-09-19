@@ -22,5 +22,5 @@ end
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
-#
+# karl13@gmail.com 123456789
 

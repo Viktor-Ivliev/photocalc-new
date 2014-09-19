@@ -25,6 +25,7 @@ body{
 	/*background: #3c9927;
 	background: rgb(150, 133, 4);*/
 	font-family: Verdana, Arial, Helvetica, sans-serif;
+text-shadow: none;
 }
 
 .container{

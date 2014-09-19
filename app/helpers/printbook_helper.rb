@@ -1,0 +1,2 @@
+module PrintbookHelper
+end

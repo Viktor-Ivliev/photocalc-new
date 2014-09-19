@@ -31,6 +31,13 @@
 		        <li class="active"><a href="<%= result_index_path %>">Ціни</a></li>
 		        <li><a class="not_active" href="<%= prices_path %>">Таблицы</a></li>
 		        <li><a class="not_active" href="<%= admin_session_path  %>">Адміністрація</a></li>
+		        <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+		        <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+		        <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+
+
+
+
 		        <li class="dropdown">
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -39,14 +46,10 @@
 	</div>
 		<% #/futer %>
 
-
-
-
 		<%= yield %>
 
- 	<%= render OrderDate.all %>
+ 	<%= render partial: "order_dates/order_date", collection: OrderDate.all %>
 
-	<!--heder-->
 	<div class="heder">
 		<div class="heder_level_1">
 			<div class="contact" >
