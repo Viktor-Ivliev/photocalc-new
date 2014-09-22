@@ -1,3 +1,16 @@
+<% content_for :futer do %>
+  <li ><a class="active" href="<%= result_index_path %>">Ціни</a></li>
+  <% if admin_signed_in? %>
+    <li><a class="not_active" href="<%= prices_path %>">Таблиці</a></li>
+    <li><a class="not_active" href="<%= admin_session_path  %>">Адміністрація</a></li>
+  <% end %>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+<% end %>
+
+
+
 <div class="container">
   <div class="form_calculator ">
     <%= form_for :calc, url: result_calc_path do |f| %>

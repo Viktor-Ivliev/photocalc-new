@@ -43,7 +43,6 @@ Rails.application.routes.draw do
 
   get 'landing_page/slimbook'
 
-  get 'landing_page/planshet'
 
   resources :order_date
 

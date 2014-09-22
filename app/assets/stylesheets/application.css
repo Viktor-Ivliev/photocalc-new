@@ -29,7 +29,6 @@ text-shadow: none;
 }
 
 .container{
-	/*background: #fff;*/
 	background-color: rgba(248, 248, 248, 0.6);
 	margin-left: 5%;
 	width: 77.5%;
@@ -92,36 +91,34 @@ table{
  	display: inline-block;
  }
 
- .nav a{
- 	font-family: 'Comic Sans MS', cursive;
-	font-size: 1.5em;
-	font-style: italic;
-	color: rgb(255, 255, 255) !important;
-	margin-right: 5px;
-	line-height: 128%;
-	margin-top: 7px;
 
 
- }
-
- .nav .not_active:hover{
+ .nav .not_active:hover, .active{
 	 
 	color: rgb(255, 255, 0) !important;
 	background: none !important;
-	
-
  }
 
-.active a{
-	color: rgb(255, 255, 0) !important;
-	background: none !important;
-	font-family: Georgia, serif;
+
+.active, .not_active{
 	font-size: 1.5em;
+	margin-right: 5px;
+	line-height: 128%;
+	margin-top: 7px;
+	font-family: 'Comic Sans MS', cursive;
+}
+
+.active{
 	font-weight: bold;
 	text-align: center;
 	letter-spacing: 0.15em;
-	
 }
+
+
+ .not_active{
+	font-style: italic;
+	color: rgb(255, 255, 255) !important;
+ }
 
 
 .order-date{
@@ -177,6 +174,51 @@ table{
 }
 
 
+.exit_admin{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 17.5%;
+	margin-left: 82.5%;
+	margin-top: 4%;
+	height: 45px;
+	font-family: "Times New Roman",serif;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 120%;
+	
+	border: 1px solid #234925;
+	color: #FFF !important;
+
+	background: #050505; /* Old browsers */
+	background: -moz-linear-gradient(left, #050505 0%, #848484 50%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#050505), color-stop(50%,#848484), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to right, #050505 0%,#848484 50%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
+
+
+
+}
+
+.exit_admin:hover{
+	color: #000 !important;
+	border: 1px solid #234925;
+	background: #050505; /* Old browsers */
+	background: -moz-linear-gradient(left, #050505 0%, #f2f218 50%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#050505), color-stop(50%,#f2f218), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to right, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
+}
+
+
+
+
 .heder_level_1{
 	background: rgb(125,126,125);
 	background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%);
@@ -188,20 +230,6 @@ table{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
 	color: aliceblue;
 	
-
-/*
-	-moz-border-radius-topleft: 90px;
-	-webkit-border-top-left-radius: 90px;
-	 border-top-left-radius: 90px;
-	-moz-border-radius-topright: 90px;
-	-webkit-border-top-right-radius: 90px;
-	border-top-right-radius: 90px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	border-bottom-left-radius: 5px;*/
 
 	-webkit-border-top-left-radius: 20px;
 	-webkit-border-top-right-radius: 20px;
@@ -264,21 +292,21 @@ table{
 	position: fixed;
 	width: 100%;
 	top: 93.5%;
+	margin-bottom: 0px !important;
 
 }
 
-.heder_level_2{
-	position: fixed;
-	width: 100%;
-	top: 97%;
-}
 
 .heder_level_2{
 	background: black;
 	color: aliceblue;
 	text-align: center;
 	margin-bottom: 0px;
-	height: 25px;
+	min-height: 25px;
+	position: fixed;
+	width: 100%;
+	top: 97%;
+	margin-top: 0px;
 
 }
 
@@ -297,7 +325,7 @@ table{
 
 .heder:hover .center_block{
 	
-	height: 50px;
+	min-height: 50px;
 	margin-top: -15px;
 	opacity: 1;
 	visibility: visible;

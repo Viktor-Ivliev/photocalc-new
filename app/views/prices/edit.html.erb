@@ -1,6 +1,16 @@
-<h1>Editing price</h1>
+<% content_for :futer do %>
+  <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
+  <li><a class="not_active" href="<%= prices_path %>">Таблиці</a></li>
+  <li><a class="active" href="<%= admin_session_path  %>">Адміністрація</a></li>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+<% end %>
 
-<%= render 'form' %>
+<div class="container">
+	<h1>Режим редагування таблиці</h1>
 
-<%= link_to 'Show', @price %> |
-<%= link_to 'Back', prices_path %>
+	<%= render 'form' %>
+</div>
+
+

@@ -11,6 +11,4 @@ class LandingPageController < ApplicationController
   def slimbook
   end
 
-  def planshet
-  end
 end
