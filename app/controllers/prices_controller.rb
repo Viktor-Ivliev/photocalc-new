@@ -37,6 +37,9 @@ class PricesController < ApplicationController
     @price = Price.new(price_params)
 
     if @price.save
+      f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+      f.puts(" ")
+      f.close 
       redirect_to @price, notice: 'Price was successfully created.'
     else
       render :new
@@ -46,6 +49,9 @@ class PricesController < ApplicationController
   # PATCH/PUT /prices/1
   def update
     if @price.update(price_params)
+      f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+      f.puts(" ")
+      f.close
       redirect_to @price, notice: 'Price was successfully updated.'
     else
       render :edit
@@ -55,6 +61,9 @@ class PricesController < ApplicationController
   # DELETE /prices/1
   def destroy
     @price.destroy
+    f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+    f.puts(" ")
+    f.close
     redirect_to prices_url, notice: 'Price was successfully destroyed.'
   end
 
