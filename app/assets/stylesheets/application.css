@@ -19,16 +19,9 @@
 @import "bootstrap";
 
 body{
-	/*background: #FFFB99;*/
-	background: url("/assets/beckgraund5.jpg") ; /*no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;;*/
-	/*background: #3c9927;
-	background: rgb(150, 133, 4);*/
+	background: url("/assets/beckgraund5.jpg") ; 
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-text-shadow: none;
+	text-shadow: none;
 }
 
 .container{

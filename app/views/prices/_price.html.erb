@@ -1,11 +1,13 @@
  <!--старая структура показки таблиц-->
 
- Вид фотодруку:
- <%= price.type_photo %><br>
- Формат:
- <%= price.format %><br>
-<table>
+<table class="table table-striped">
   <thead>
+    <tr>
+      <th colspan="4">  Вид фотодруку: <%= price.type_photo %></th>
+    </tr>
+    <tr>
+      <th colspan="4"> Формат: <%= price.format %></th>
+    </tr>
     <tr>
       <th colspan="2" class="price_up" >Ціна від 1-4</th>
       <th class="splan_width"></th>

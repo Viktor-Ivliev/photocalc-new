@@ -44,13 +44,13 @@ Rails.application.routes.draw do
   get 'landing_page/slimbook'
 
 
-  resources :order_date
-
   resources :result
 
   post 'result/calc' => 'result#calc', as: :result_calc
   post 'result/res' => 'result#res', as: :result_res
   resources :prices
+
+  resources :order_date
 
   devise_for :admins
   root 'landing_page#index'

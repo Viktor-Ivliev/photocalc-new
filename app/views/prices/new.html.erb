@@ -11,31 +11,29 @@
 <div class="container">
 
 
+  <div class="editing_dashboard">
 
+    <% @order_dates.each do |order_date| %>
+      <%= order_date.info %>
+      <%= order_date.date %>
+      <%= link_to '', edit_order_date_path(order_date), class: "font-size-glyphicon glyphicon glyphicon-pencil" %>
+    <% end %>
 
-<% @order_dates.each do |order_date| %>
-      <tr>
-        <td><%= order_date.info %></td>
-        <td><%= order_date.date %></td>
-        <td><%= link_to 'Змінити', edit_order_date_path(order_date) %></td>
-      </tr>
-<% end %>
+  </div>
 
-<p>админ</p>
-
-<table class="table_prices">
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Вид ф</th>
+      <th>Вид</th>
       <th>Тип паперу</th>
       <th>Формат</th>
-      <th>Мін кільк розв</th>
-      <th>Макс кільк розв</th>
+      <th>Мін розв</th>
+      <th>Макс розв</th>
       <th>Крок</th>
-      <th>Ціна від 1-4 </th>
-      <th>Різниця 1-4</th>
-      <th>Ціна від 5-99 </th>
-      <th>Різниця 5 -99</th>
+      <th>Ціна 1-4 </th>
+      <th>Різниця</th>
+      <th>Ціна 5-99 </th>
+      <th>Різниця</th>
       <th></th>
       <th></th>
     </tr>
@@ -43,7 +41,7 @@
 
   <tbody>
     <% @prices.each do |price| %>
-      <tr class=" <%= cycle('list_line_odd', 'list_line_even') %>"
+      <tr class="color_table <%#= cycle('list_line_odd', 'list_line_even') %>"
 >
         <td><%= price.type_photo %></td>
         <td><%= price.type_paper %></td>
@@ -56,8 +54,8 @@
         <td><%= price.price5_99 %></td>
         <td><%= price.difference5_99 %></td>
         <!--<td><%#= link_to 'Show', price %></td>-->
-        <td><%= link_to 'Змінити', edit_price_path(price) %></td>
-        <td><%= link_to 'Видалити', price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '',edit_price_path(price), class: "font-size-glyphicon glyphicon glyphicon-pencil" %></td>
+        <td><%= link_to '', price, method: :delete, data: { confirm: 'Are you sure?'  }, class: "font-size-glyphicon icon-trash" %></td>
       </tr>
     <% end %>
   </tbody>
