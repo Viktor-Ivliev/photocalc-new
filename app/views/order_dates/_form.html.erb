@@ -10,16 +10,19 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_area :date %>
+    <label>Червона напис:</label>
+    <%= f.text_area :info %>
   </div>
   <div class="field">
-    <%= f.label :info %><br>
-    <%= f.text_area :info %>
+    <label>Дата:</label>
+    <%= f.text_area :date %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <div class="actions">
+  <%= link_to 'Скасувати', new_price_path, class: "btn dropdown-toggle" %>
+  <div class="actions">
 <% end %>

@@ -170,46 +170,17 @@ table{
 }
 
 
+
 .exit_admin{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 17.5%;
-	margin-left: 82.5%;
-	margin-top: 4%;
-	height: 45px;
-	font-family: "Times New Roman",serif;
-	font-size: 2em;
-	font-weight: bold;
-	line-height: 120%;
-	
-	border: 1px solid #234925;
-	color: #FFF !important;
-
-	background: #050505; /* Old browsers */
-	background: -moz-linear-gradient(left, #050505 0%, #848484 50%, #0e0e0e 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#050505), color-stop(50%,#848484), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, #050505 0%,#848484 50%,#0e0e0e 100%); /* IE10+ */
-	background: linear-gradient(to right, #050505 0%,#848484 50%,#0e0e0e 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
-
-
-
+	font-size: 1.5em;
+	margin-right: 5px;
+	line-height: 128%;
+	margin-top: 7px;
+	color: #fff !important;
 }
-
 .exit_admin:hover{
-	color: #000 !important;
-	border: 1px solid #234925;
-	background: #050505; /* Old browsers */
-	background: -moz-linear-gradient(left, #050505 0%, #f2f218 50%, #0e0e0e 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#050505), color-stop(50%,#f2f218), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* IE10+ */
-	background: linear-gradient(to right, #050505 0%,#f2f218 50%,#0e0e0e 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
+	color: #ff0 !important;
+
 }
 
 

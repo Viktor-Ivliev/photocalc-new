@@ -3,7 +3,7 @@ class OrderDatesController < ApplicationController
 
   # GET /order_dates/1/edit
   def edit
-    @order_date = Order_date.all
+    #@order_date = Order_date.all
   end
 
   # PATCH/PUT /order_dates/1

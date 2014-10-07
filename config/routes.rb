@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   post 'result/res' => 'result#res', as: :result_res
   resources :prices
 
-  resources :order_date
+  resources :order_dates
 
   devise_for :admins
   root 'landing_page#index'
