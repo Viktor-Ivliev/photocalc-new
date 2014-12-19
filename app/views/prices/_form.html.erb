@@ -11,46 +11,46 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :type_photo, "Вид фотодруку" %>
     <%= f.text_field :type_photo %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :type_paper, "Тип паперу" %>
     <%= f.text_field :type_paper %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :format, "Формат" %>
     <%= f.text_field :format %>
   </div>
   <br/>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :min_num_pages, "Мін кількість розворотів" %>
     <%= f.number_field :min_num_pages, in: 1.0..500.0 %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :max_num_pages, "Макс кількість розворотів" %>
     <%= f.number_field :max_num_pages, in: 1.0..500.0 %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :step_pages, "Крок" %>
     <%= f.number_field :step_pages, in: 1.0..4.0 %>
   </div>
   <br/>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :price1_4, "Ціна від 1 до 4 включно" %>
     <%= f.number_field :price1_4, in: 1.0..50000.0 %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :price5_99, "Ціна від 5 до 99 включно" %>
     <%= f.number_field :price5_99, in: 1.0..50000.0 %>
   </div>
   <br/>
-  <div class="field ">
+  <div class="field field_form_admin">
     <%= f.label :difference1_4, "Різниця цін від 1 до 4" %>
     <%= f.number_field :difference1_4, in: 1.0..500.0 %>
   </div>
-  <div class="field">
+  <div class="field field_form_admin">
     <%= f.label :difference5_99, "Різниця цін від 5 до 99" %>
     <%= f.number_field :difference5_99, in: 1.0..500.0 %>
   </div>

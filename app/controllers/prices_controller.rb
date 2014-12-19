@@ -49,9 +49,6 @@ class PricesController < ApplicationController
   # PATCH/PUT /prices/1
   def update
     if @price.update(price_params)
-      f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
-      f.puts(" ")
-      f.close
       redirect_to @price, notice: 'Price was successfully updated.'
     else
       render :edit
