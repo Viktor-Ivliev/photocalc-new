@@ -25,14 +25,10 @@ jQuery ->
 					else
 						Price_calc = parseInt(nu[0].price5_99) + parseInt(nu[0].difference5_99) * (parseInt(num_pages) - parseInt(nu[0].min_num_pages))
 				return
-			
-
 			Price_all = 1
 			Price_all = Price_calc * number_copies
 			$('#calc').html("<h4><b>Вартість:</b><br/> <div class='price'> #{Price_calc} </div> грн. за книгу <hr/><b>Загальна вартiсть: </b><div class='price_grin'> #{Price_all} </div> грн.</h4>")
 			$('#calc').parent().show() 
-
-
 
 	page_count = (nil) ->
 		photo = $("input[name='calc[photo]']:checked").val()
@@ -68,9 +64,9 @@ jQuery ->
 			$('#calc_format').html("#{options}")
 			$('#calc_format').parent().show()
 
-			$('#calc_paper').parent().hide()
-			$('#number_field_number_of_turns').parent().hide()
-			$('#number_field_number').parent().hide()
+			#//$('#calc_paper').parent().hide()
+			#//$('#number_field_number_of_turns').parent().hide()
+			#//$('#number_field_number').parent().hide()
 			list_of_3 "list"
 
 	#// список 3
@@ -92,26 +88,25 @@ jQuery ->
 			$('#calc_paper').html("#{options}")
 			$('#calc_paper').parent().show()
 
-			$('#number_field_number_of_turns').parent().hide()
-			$('#number_field_number').parent().hide()
+			#//$('#number_field_number_of_turns').parent().hide()
+			#//$('#number_field_number').parent().hide()
 			page_count "count"
 
 
 	#// список 2
-	$('#calc_format').parent().hide()
+	#//$('#calc_format').parent().hide()
 	$('#calc_photo').change ->
 		list_of_2 "list"  
 
 	#// список 3
-	$('#calc_paper').parent().hide()
+	#//$('#calc_paper').parent().hide()
 	$('#calc_format').change ->
 		list_of_3 "list"
 		page_count "count"
 
-
 	#//количество прайсов и страниц
-	$('#number_field_number_of_turns').parent().hide()
-	$('#number_field_number').parent().hide()
+	#//$('#number_field_number_of_turns').parent().hide()
+	#//$('#number_field_number').parent().hide()
 	$('#calc_paper').change ->
 		page_count "count"
 		
@@ -122,11 +117,8 @@ jQuery ->
 	$('#calc_number').change ->
 		calculate "calculate"
 
-
-
-
 	#//обработка клика "расчитать"
-	$('#calc').parent().hide()
+	#//$('#calc').parent().hide()
 	$('#calculate_cost').click ->
 		calculate "calculate"
 
@@ -134,8 +126,3 @@ jQuery ->
 	
 	$(document).on 'ready page:load', ->
 		list_of_2 "list"  
-	
- 
-
-	
-
