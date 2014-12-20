@@ -5,8 +5,9 @@ class ResultController < ApplicationController
   end
 
 	def calc
+    #calc[:photo]
 
-		render :index
+		#render :index
 	end
 
 

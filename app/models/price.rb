@@ -18,5 +18,3 @@ end
 #  min_num_pages  :integer
 #  step_pages     :integer
 #  max_num_pages  :integer
-#
-
