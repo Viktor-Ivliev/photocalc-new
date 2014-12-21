@@ -30,9 +30,12 @@
 		      <ul class="nav navbar-nav">
 
 		      	<%= yield :futer %>
-		       <li><% if admin_signed_in? %>
-	 				<%= link_to " Вихід", destroy_admin_session_path, :method => :delete, :class  => "glyphicon icon-off exit_admin", :data => "dropdown" %>
-	 			<% end %></li>
+
+		        <li>
+		       		<% if admin_signed_in? %>
+	 					<%= link_to " Вихід", destroy_admin_session_path, :method => :delete, :class  => "glyphicon glyphicon-off exit_admin", :data => "dropdown" %>
+	 				<% end %>
+	 			</li>
 
 		        <li class="dropdown">
 		      </ul>
@@ -42,21 +45,17 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 	</div>
-		<% #/futer %>
+	<!--futer-->
 
 		<%= yield %>
-
-<<<<<<< HEAD
- 	<%= render partial: "order_dates/order_date", collection: OrderDate.all %>
- 	
-=======
+	<% unless admin_signed_in? %>
  	<%= render partial: 'order_dates/order_date', collection: OrderDate.all %>
->>>>>>> master
+ 	<% end %>
 
 	<div class="heder">
 		<div class="heder_level_1">
 			<div class="contact" >
-				<span>Контактная информация</span>
+				<span>Контактна інформація</span>
 				<div class="center_block">
 					<div class="contact_info">
 						E-mail:

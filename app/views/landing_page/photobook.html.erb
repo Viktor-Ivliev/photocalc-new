@@ -1,7 +1,9 @@
+<% content_src_img='/assets/content_info/slim_book/' %>
+
 <% content_for :futer do %>
   <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
 	<%= render 'futer' %>
-  <li><a class="active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="active_menu" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
   <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
   <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
 <% end %>
@@ -15,79 +17,514 @@
 			з листами надрукованими фотохімічним способом на фотопапері Fuji. Добротний і перевірений пластик, який використовується у прошарку між розворотами, додає фотокнизі вагу і солідність, а демократична «цифролабівська» <a href="<%= result_index_path %>">ціна</a> і якість - роблять цю класику доступною для будь-якого фотографа.
 		</p>
 	</div>
+	<img src="/assets/content_info/photo_book/photobook1.png" class="img-thumbnail"/>
 
 	<h2 class="block-title">Формати книг</h2>
          
-	<div class="content clearfix">
-		<div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-3">
-			<ul class="menu">
-				<li class="first leaf menu-mlid-977">
-					<a href="/photobooks/photobook/30x30" class="menu_icon menu-977" title="">
-						30x30
-					</a>
-				</li>
-				<li class="leaf menu-mlid-978">
-					<a href="/photobooks/photobook/20x30" class="menu_icon menu-978">20x30</a>
-				</li>
-				<li class="leaf menu-mlid-979">
-					<a href="/photobooks/photobook/30x20" class="menu_icon menu-979">30x20</a>
-				</li>
-				<li class="last leaf menu-mlid-980">
-					<a href="/photobooks/photobook/20x20" class="menu_icon menu-980" title="">20x20</a>
-				</li>
-			</ul>
+
+		<!-- Nav tabs -->
+	<ul class="nav nav-tabs">
+	  <li class="active"><a href="#photobook30x30" data-toggle="tab">30x30</a></li>
+	  <li><a href="#photobook20x30" data-toggle="tab">20x30</a></li>
+	  <li><a href="#photobook18x24" data-toggle="tab">18x24</a></li>
+	  <li><a href="#photobook23x23" data-toggle="tab">23x23</a></li>
+	  <li><a href="#photobook29x19" data-toggle="tab">29x19</a></li>
+	  <li><a href="#photobook19x19" data-toggle="tab">19x19</a></li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+	  	<div class="tab-pane fade in active" id="photobook30x30">
+		  	<h2>Фотокнига PhotoBook 30x30</h2>
+		  	<p>Квадратний формат фотокниги. Традиційний весільний альбом.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>554 х 284 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>284 х 290 мм(у розгорнутому вигляді 565 х 290 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+				<tr>
+					<td>розворотів min/max</td>
+					<td>3 / 25</td>
+				</tr>
+			<tr>
+						<td>Вікно фотовставки</td>
+						<td>130 х 130 мм</td>
+					</tr>
+			</table>
+
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG(мінімальна компресія, максимальна якість)</td>
+				</tr>
+				
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+				
+				<tr>
+					<td>Разрішення</td>
+					<td>300 dpi(точок на дюйм)</td>
+				</tr>
+				
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>608 х 320 мм(7181 х 3780 пікселів)</td>
+				</tr>
+				
+				<tr>
+					<td>Файл обкладинки для 9-25 розворотів</td>
+					<td>621 х 320 мм(7335 х 3780 пікселів)</td>
+				</tr>
+
+				<tr>
+					<td>Файл фотовставки для шкірзам обкладинки</td>
+					<td>146 х 146 мм(1724 х 1724 пікселів)</td>
+				</tr>
+				
+				<tr>
+					<td>Файл розвороту</td>
+					<td>560 х 290 мм(6614 х 3425 пікселів)</td>
+				</tr>
+			</table>
+
+			<h3>Схеми обрізки</h3>
+			<p>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>25_cover_slimbook_30x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>25_cover_slimbook_30x30_small.jpg" typeof="foaf:Image" />
+				</a>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>40_cover_slimbook_30x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>40_cover_slimbook_30x30_small.jpg" typeof="foaf:Image" />
+				</a>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>page_slimbook_30x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>page_slimbook_30x30_small.jpg" typeof="foaf:Image" />
+				</a>
+			</p>
+			
 		</div>
+
+		<div class="tab-pane fade" id="photobook20x30">
+			<h2>Фотокнига PhotoBook 20x30</h2>
+			<p>Вертикальний формат фотокниги. Класична випускна фотокнига.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>400 х 284 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>206 х 290 мм (у розгорнутому вигляді 410 х 290 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+				<tr>
+					<td>Розворотів min/max</td>
+					<td>3 / 20</td>
+				</tr>
+			<tr>
+						<td>Вікно фотовставки</td>
+						<td>100 х 130 мм</td>
+					</tr>
+			</table>
+
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG (мінімальна компресія, максимальна якість)</td>
+				</tr>
+
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+
+				<tr>
+					<td>Розрішення</td>
+					<td>300 dpi (точок на дюйм)</td>
+				</tr>
+
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>456 х 320 мм (5386 х 3780 пікселів)</td>
+				</tr>
+
+				<tr>
+					<td>Файл обкладинки для 9-20 розворотів</td>
+					<td>469 х 320 мм (5540 х 3780 пікселів)</td>
+				</tr>
+			         <tr>
+					<td>Файл фотовставки для шкірзам обкладинки</td>
+					<td>116 х 146 мм (1370 х 1724 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл розвороту</td>
+					<td>408 х 290 мм (4819 х 3425 пікселів)</td>
+				</tr>
+			</table>
+
+			<h3>Схема обрізу</h3>
+
+			<p>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>25_cover_slimbook_20x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>25_cover_slimbook_20x30_small.jpg?" typeof="foaf:Image" />
+				</a>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>40_cover_slimbook_20x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>40_cover_slimbook_20x30_small.jpg?" typeof="foaf:Image" />
+				</a>
+				<a class="colorbox colorbox-insert-image" href="<%= content_src_img %>page_slimbook_20x30.jpg" rel="gallery-all">
+					<img alt="" class="image-w340" src="<%= content_src_img %>page_slimbook_20x30_small.jpg" typeof="foaf:Image" />
+				</a>
+			</p>
+	  		
+		</div>
+		<div class="tab-pane fade" id="photobook18x24">
+	  		<h2>Фотокнига PhotoBook 18x24</h2>
+	  		<p>Вертикальний формат фотокниги. Класична випускна фотокнига.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>340 х 238 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>178 х 244 мм (у розгорнутому вигляді 350 х 244 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+	                        <tr>
+					<td>Розворотів min/max</td>
+					<td>3 / 20</td>
+				</tr>
+				<tr>
+					<td>Вікно фотовставки</td>
+					<td>90 х 115 мм</td>
+				</tr>
+			</table>
+			
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG (мінімальна компресія, максимальна якість)</td>
+				</tr>
+			
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+		
+				<tr>
+					<td>Розширення</td>
+					<td>300 dpi (точок на дюйм)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>396 х 274 мм (4677 х 3236 пікселів)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 9-20 розворотів</td>
+					<td>409 х 274 мм (4831 х 3236 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл фотовставки для шкірзам обкладинки</td>
+					<td>106 х 131 мм (1252 х 1547 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл розвороту</td>
+					<td>348 х 244 мм (4110 х 2882 пікселів)</td>
+				</tr>
+			</table>
+			
+			<h3>Схеми обрізки</h3>
+				<a href="<%= content_src_img %>25_cover_slimbook_18x24.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>25_cover_slimbook_18x24_small.jpg" alt="Обкладинка 3 - 8 розворотів фотокниги 18x24" title="Обкладинка фотокниги 18x24 до 8 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>40_cover_slimbook_18x24.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>40_cover_slimbook_18x24_small.jpg" alt="Обкладинка 9 - 20 розворотів фотокниги 18x24" title="Обкладинка фотокниги 18x24 до 20 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>page_slimbook_18x24.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>page_slimbook_18x24_small.jpg" alt="Розворот фотокниги 18x24" title="Розворот фотокниги 18x24" />
+				</a>
+	  		
+		</div>
+		<div class="tab-pane fade" id="photobook23x23">
+		  	<h2>Фотокнига PhotoBook 23x23</h2>
+		  	<p>Квадратний формат фотокниги. Універсальний формат, підходить як для весільних, так і для випускних книг чи персональних портфоліо.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>464 х 238 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>238 х 244 мм (у розгорнутому вигляді 466 х 244 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+	                        <tr>
+					<td>Розворотів min/max</td>
+					<td>3 / 20</td>
+				</tr>
+				<tr>
+				<td>Вікно фотовставки</td>
+				<td>110 х 110 мм</td>
+			</tr>
+			</table>
+			
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG (мінімальна компресія, максимальна якість)</td>
+				</tr>
+			
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+		
+				<tr>
+					<td>Розширення</td>
+					<td>300 dpi (точок на дюйм)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>519 х 274 мм (6130 х 3236 пікселів)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 9-20 розворотів</td>
+					<td>532 х 274 мм (6284 х 3236 пікселів)</td>
+				</tr>
+	                      
+	                        <tr>
+					<td>Файл фотовставки для кожзам обкладинки</td>
+					<td>126 х 126 мм (1488 х 1488 пікселів)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл розвороту</td>
+					<td>471 х 244 мм (5563 х 2882 пікселів)</td>
+				</tr>
+			</table>
+			
+			<h3>Схеми обрізки</h3>
+				<a href="<%= content_src_img %>25_cover_slimbook_23x23.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>25_cover_slimbook_23x23_small.jpg" alt="Обкладинка 3 - 8 розворотів фотокниги 23x23" title="Обкладинка фотокниги 23x23 до 8 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>40_cover_slimbook_23x23.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>40_cover_slimbook_23x23_small.jpg" alt="Обкладинка 9 - 20 розворотів фотокниги 23x23" title="Обкладинка фотокниги 23x23 до 20 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>page_slimbook_23x23.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>page_slimbook_23x23_small.jpg" alt="Розворот фотокниги 23x23" title="Розворот фотокниги 23x23" />
+				</a>
+
+		</div>
+		<div class="tab-pane fade" id="photobook29x19">
+		  	<h2>Фотокнига PhotoBook 29x19</h2>
+		  	<p>Як правило надають перевагу випускники ВУЗів, також добре підходить для панорамних зображень.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>558 х 184 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>286 х 192 мм (у розгорнутому вигляді 568 х 192 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+	                        <tr>
+					<td>Розворотів min/max</td>
+					<td>3 / 20</td>
+				</tr>
+				<tr>
+				<td>Вікно фотовставки</td>
+				<td>130 х 100 мм</td>
+			</tr>
+			</table>
+			
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG (мінімальна компресія, максимальна якість)</td>
+				</tr>
+			
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+		
+				<tr>
+					<td>Розширення</td>
+					<td>300 dpi (точок на дюйм)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>614 х 223 мм (7252 х 2634 пікселів)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 9-20 розворотів</td>
+					<td>627 х 223 мм (7406 х 2634 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл фотовставки для шкірзам обкладинки</td>
+					<td>146 х 116 мм (1724 х 1370 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл розвороту</td>
+					<td>566 х 193 мм (6685 х 2280 пікселів)</td>
+				</tr>
+			</table>
+			
+			<h3>Схеми обрізки</h3>
+				<a href="<%= content_src_img %>25_cover_slimbook_29x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>25_cover_slimbook_29x19_small.jpg" alt="Обкладинка 3 - 8 розворотів фотокниги 29x19" title="Обкладинка фотокниги 29x19 до 8 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>40_cover_slimbook_29x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>40_cover_slimbook_29x19_small.jpg" alt="Обкладинка 9 - 20 розворотів фотокниги 29x19" title="Обкладинка фотокниги 29x19 до 20 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>page_slimbook_29x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>page_slimbook_29x19_small.jpg" alt="Розворот фотокниги 29x19" title="Розворот фотокниги 29x19" />
+				</a>
+		</div>
+		<div class="tab-pane fade" id="photobook19x19">
+		  	<h2>Фотокнига PhotoBook 19x19</h2>
+		  	<p>Квадратний формат фотокниги. Відмінний компактний мінібук.</p>
+			<h3>Параметри готової книги</h3>
+			<table class="lines">
+				<tr>
+					<td>Розмір розвороту</td>
+					<td>364 х 182 мм</td>
+				</tr>
+				<tr>
+					<td>Обкладинка</td>
+					<td>190 х 192 мм (у розгорнутому вигляді 375 х 192 мм)</td>
+				</tr>
+				<tr>
+					<td>Суперобкладинка</td>
+					<td>немає</td>
+				</tr>
+				<tr>
+					<td>Папір</td>
+					<td>Fujicolor Crystal Archive LUSTRE</td>
+				</tr>
+	                        <tr>
+					<td>Розворотів min/max</td>
+					<td>3 / 20</td>
+				</tr>
+				<tr>
+					<td>Вікно фотовставки</td>
+					<td>90 х 90 мм</td>
+				</tr>
+
+			</table>
+			
+
+			<h3>Вимоги до файлів для друку</h3>
+			<table class="lines">
+				<tr>
+					<td>Формат файлу</td>
+					<td>JPG (мінімальна компресія, максимальна якість)</td>
+				</tr>
+			
+				<tr>
+					<td>Колірна модель</td>
+					<td>RGB, профіль sRGB IEC61966</td>
+				</tr>
+		
+				<tr>
+					<td>Розширення</td>
+					<td>300 dpi (точок на дюйм)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 3-8 розворотів</td>
+					<td>421 х 223 мм (4972 х 2634 пікселів)</td>
+				</tr>
+			
+				<tr>
+					<td>Файл обкладинки для 9-20 розворотів</td>
+					<td>434 х 223 мм (5126 х 2634 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл фотовставки для шкірзам обкладинки</td>
+					<td>106 х 106 мм 1252 х 1252 пікселів)</td>
+				</tr>
+				<tr>
+					<td>Файл розвороту</td>
+					<td>373 х 193 мм (4406 х 2280 пікселів)</td>
+				</tr>
+			</table>
+			
+			<h3>Схеми обрізки</h3>
+				<a href="<%= content_src_img %>25_cover_slimbook_19x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>25_cover_slimbook_19x19_small.jpg" alt="Обкладинка 3 - 8 розворотів фотокниги 19x19" title="Обкладинка фотокниги 19x19 до 8 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>40_cover_slimbook_19x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>40_cover_slimbook_19x19_small.jpg" alt="Обкладинка 9 - 20 розворотів фотокниги 19x19" title="Обкладинка фотокниги 19x19 до 20 розворотів" />
+				</a>
+				<a href="<%= content_src_img %>page_slimbook_19x19.jpg" class="highslide" onclick="return hs.expand(this)">
+					<img src="<%= content_src_img %>page_slimbook_19x19_small.jpg" alt="Розворот фотокниги 19x19" title="Розворот фотокниги 19x19" />
+				</a>
+
+		</div>
+		
 	</div>
-
-	<h2>Основні характеристики</h2>
-
-	<h3>Папір</h3>
-
-	<p> 
-		Для друку ваших книг ми використовуємо фотопапір Fujicolor Crystal Archive і лабораторії Noritsu 34 PRO 
-	</p>
-
-	<h4>1. Fujicolor Crystal Archive LUSTRE</h4>
-
-	<p>
-		 Цей тип паперу використовується за замовчуванням при друці всіх наших фотокниг. Фотографам старої школи добре відома так звана «тисненка». Фотопапір <b>Lustre</b> (називають «ластер» або «люстра»), максимально на неї схожий. Папір має специфічний рельєф і характерну кольоропередачу.
-	</p>
-	<p> 
-		В нас на сайті при оформленні замовлення цей папір називається матовим. 
-	</p>
-
-	<h4>2. Fujicolor Crystal Archive SILK</h4>
-	<p>
-		Якщо Вам необхідно ще більше «преміальності» - цей папір по Вашу душу. Текстурована фактура схожа на шовкову тканину з винятковою, характерною лише для неї, глибокою передачею кольору. Як і для всього виняткового, в «шовку» є свої обмеження - папір доступний лише для формату фотокниг 30х30.
-	</p>
-
-	<h3>Основа</h3>
-
-	<p>
-		Для прошарку між розворотами ми використовуємо пластик. Багаторічний досвід роботи з різними матеріалами для прошарку зміцнив нас у вірі в те, що «краще пластика може бути тільки пластик (якщо це не <a href="<%= landing_page_slimbook_path%>">SlimBook</a>)».
-	</p>
-	<p>
-		Пластик передбачуваний у виробництві, не деформується в експлуатації або при зміні температурних режимів. Його товщина і вага додають книзі фоліантністі та солідності. Підсумуємо: «класика» - це пластикова основа листів, «революційна класика» - це <b>SlimBook</b>, все інше - компроміс.
-	</p>
-
-	<h3>Обкладинки</h3>
-
-	<h4>1. Фотообкладинка</h4>
-	<p>
-		Базова обкладинка всіх наших фотокниг. Як і в <a href="<%= landing_page_printbook_path%>">PrintBook</a> вона тверда, надрукувана цифровим способом і покрита глянцевою ламінацією.
-	</p>
-
-	<h4>2. Обкладинки з шкірзамінника</h4>
-	<p>
-		Більше життя, більше кольору! Вибирайте ту, яка підходить під тональність і настрій Вашої фотокниги. Італійський високоякісний шкірзам залишить приємні тактильні відчуття, а совість не буде гризти за невинно вбитих звіряток.
-	</p>
-
-	<h4>3. Обкладинка з шкірзаму з фотовставкою</h4>
-	<p>
-		Чудове рішення для того, щоб прикрасити Вашу книгу. Замовляйте обкладинку з шкірзаму і Ваша фотокнига стане унікальною та неповторною.
-	</p>
-
-
-
 
 </div>

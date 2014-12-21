@@ -13,10 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
-
- 
-@import "bootstrap";
+ @import "bootstrap";
 
 body{
 	background: url("/assets/beckgraund5.jpg") ; 
@@ -89,14 +86,14 @@ table{
 
 
 
- .nav .not_active:hover, .active{
+ .not_active:hover, .active_menu{
 	 
 	color: rgb(255, 255, 0) !important;
 	background: none !important;
  }
 
 
-.active, .not_active{
+.active_menu, .not_active, .exit_admin{
 	font-size: 1.5em;
 	margin-right: 5px;
 	line-height: 128%;
@@ -104,14 +101,14 @@ table{
 	font-family: 'Comic Sans MS', cursive;
 }
 
-.active{
+.active_menu{
 	font-weight: bold;
-	text-align: center;
-	letter-spacing: 0.15em;
+	text-align: center;/*
+	letter-spacing: 0.15em;*/
 }
 
 
- .not_active{
+ .not_active, .exit_admin{
 	font-style: italic;
 	color: rgb(255, 255, 255) !important;
  }
@@ -171,13 +168,14 @@ table{
 
 
 
-.exit_admin{
+/*.exit_admin{
 	font-size: 1.5em;
 	margin-right: 5px;
 	line-height: 128%;
 	margin-top: 7px;
 	color: #fff !important;
-}
+}*/
+
 .exit_admin:hover{
 	color: #ff0 !important;
 
@@ -232,10 +230,6 @@ table{
 		font-size: 0.7em;
 		font-weight: normal;
 }
-
-
-
-
 
 
 .contact_info{
@@ -317,3 +311,6 @@ table{
 	visibility: hidden;
 	transition: opacity 0.5s, visibility 1s linear 3s;
 }
+
+
+
