@@ -3,14 +3,113 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .first_information{
-	background: rgba(245, 245, 245, 0.87);
+	/*background: rgba(245, 245, 245, 0.87);*/
+	background: rgba(0, 0, 0, 0.78);
 	margin: -10px -15px 10px;
+	padding: 0px 17px 20px;/*padding: 0px 17px;*/
+	color: darkgoldenrod;
+
 
 	h2{
 		font-family: "Comic Sans MS",cursive;
 		font-size: 2.75em;
 		text-indent: 1em;
 		padding-top: 20px;
+		color: #1CAC17;/*color: rgba(3, 80, 0, 1);*/
 	}
 
+	p{
+		text-indent: 20px;
+		text-align: justify;
+	}
+
+	img{
+		width: 100%;
+	}
+
+	a{
+		color: #16B843 !important;
+	}
+
+}
+
+.last_information{
+	background: rgba(255, 255, 255, 1);
+	margin: -10px -15px -12px;
+	padding: 5px 17px;
+	
+
+
+	.block-title{
+		font-family: "Comic Sans MS",cursive;
+		font-size: 2.75em;
+		text-indent: 0.5em;
+		color: rgba(3, 80, 0, 1);
+	}
+
+	.tab-content h2{
+		font-size: 1.9em;
+		color: #035000;
+	}
+
+	p{
+		text-indent: 20px;
+	}
+
+	.nav-tabs > li > a, .nav-tabs > li.active > a{
+		font-size: 1.3em;
+		font-weight: bold;
+		color: rgb(102, 66, 26);
+
+	}
+	.nav-tabs > li.active > a{
+		/*text-shadow: -3px 0px 31px rgba(0, 209, 8, 1);*/
+		color: inherit;
+	}
+
+	.lines {
+	  border-collapse: collapse;
+	  width: 100%;
+	  border: 0px;
+	}
+
+	.lines td,
+	.lines th {
+	  border-top: 1px solid #b4b4b4;
+	  border-bottom: 1px solid #b4b4b4;
+	  padding: 0.8em 0;
+	}
+
+	
+	.lines td:first-child {
+	  color: #319520;
+	}
+
+	h3 {
+		display: block;
+		margin: 0;
+		padding: 0.3em 0;
+		color: #606060;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+}
+
+a:hover{
+	background: none !important;
+}
+
+
+.ooo{
+	background: #fff;
+	width: 95%;
+	padding-left: 30px;
+	margin-left: 0%;
+	border-color: red;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-box-shadow: 1px 8px 14px -1px rgba(146, 0, 0, 0.85);
+	-moz-box-shadow: 1px 8px 14px -1px rgba(146, 0, 0, 0.85);
+	box-shadow: 1px 8px 14px -1px rgba(146, 0, 0, 0.85);
 }
