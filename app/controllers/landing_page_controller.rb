@@ -11,4 +11,7 @@ class LandingPageController < ApplicationController
   def slimbook
   end
 
+  def delivery
+  end
+
 end

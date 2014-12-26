@@ -1,0 +1,68 @@
+<% content_for :futer do %>
+  <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
+  <%= render 'futer' %>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+  <li><a class="active_menu" href="<%= landing_page_delivery_path  %>">Доставка</a></li>
+<% end %>
+
+<div class="container">
+	<div class="first_information">
+	<h2>Доставка</h2>
+		
+		<img src="/assets/content_info/delivery.png" class="img-thumbnail"/>
+	</div>
+	<div class="last_information">
+		<div class="content clearfix">
+		    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+		    	<div class="field-items">
+		    		<div class="field-item even" property="content:encoded">
+		    			<h3 class="delivery">Україна</h3>
+							<p>Замовлення ви можете отримати наступним чином:</p>
+							<ul class="bull_grin">
+								<li><span class="grin">Самовивіз</span> — ви можете забрати замовлення самостійно в нашому <a href="https://www.google.com.ua/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB.,+152,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C/@48.2667344,25.949718,19z/data=!3m1!4b1!4m2!3m1!1s0x473408d23cb3f315:0xbccdaaf1680d11ae?hl=ru">офісі у місті Чернівці</a>.</li>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d663.9675507613916!2d25.949689836807412!3d48.266872325767366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473408d23cb3f315%3A0xbccdaaf1680d11ae!2z0JPQvtC70L7QstC90LAg0LLRg9C7LiwgMTUyLCDQp9C10YDQvdGW0LLRhtGWLCDQp9C10YDQvdGW0LLQtdGG0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1sru!2sua!4v1419607934666" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+								<li><span class="grin">Кур'єрською службою</span> — в інші міста України замовлення доставляється транспортними компаніями <a href="http://novaposhta.ua/"target="_blank">Нова Пошта</a> та <a href="http://www.mercury-express.com.ua/"target="_blank">Меркурій</a>.</li>
+							</ul>
+
+							<p>Термін доставки: від 1 до 3 робочих днів в залежності від від міста та служби доставки. Доставка здійснюється за рахунок клієнта. Мінімальна вартість доставки Нової пошти - 30 грн, службою доставки Меркурій - 20 грн.</p>
+
+							<p> Уточнити дату доставки замовлення Ви можете на сайті обраної транспортної компанії.
+							Обов'язково перевіряйте свої замовлення при отриманні в присутності представника служби доставки. Якщо Ви виявили певні ушкодження, <a href="faq#item_10">дотримуйтеся цих інструкцій</a>.</p>
+
+							<ul class="bull_grin">
+								<li><span class="grin">Укрпошта</span> —  якщо у Вашому місті немає представництва служб Нова пошта та Меркурій, доставку можемо здійснити Укрпоштою.</li>
+							</ul>
+							<p>При виборі Укрпошти, оплатити доставку потрібно перед відправленням замовлення в друк. Вартість доставки можна уточнити в службі підтримки.</p>
+							<p>Зверніть увагу, що Ви додатково отримаєте сповіщення про статус посилки, якщо для доставки Ви обрали пошту чи кур'єрські служби.</p>
+
+							<h3 class="delivery">Росія</h3>
+							<p> Замовлення Ви можете отримати у наступний спосіб:</p>
+							<ul class="bull_grin">
+								<li><span class="grin">«Почта России»</span> – менш надійно, відносно дешево та довго. Відправка тиражу 25 шт. (<a href="printbook">PrintBook</a> 20x30 / 12 сторінок)  коштує близько 1900 рублів та термін доставки 21 робочий день по території Росії.</li>  
+								<li><span class="grin">Комерційні служби</span> – більш надійно, швидше та трошки дорожче «Пошти Росії». Доставка в залежності від міста від 3 до 5 робочих днів та вартість доставки за аналогічний тираж складе 2400 руб.</li>
+							</ul>
+
+							<h3 class="delivery">Молдова</h3>
+							<p>Замовлення Ви можете отримати у наступний спосіб:</p>
+							<ul class="bull_grin">
+								<li><span class="grin">Передача попутним транспортом.</span> Міста, що доступні для доставки: Ліпкани, Бричани, Єдинци, Бельци, Орхей, Кишинів. Термін доставки 1 робочий день.</li>  
+								<li><span class="grin">«Нова Пошта»</span> Ви можете забрати посилку самі <a href="http://novaposhta.ua/map/index/ua">з найближчого</a> до кордону відділення Нової Пошти. Термін доставки 2-4 робочих дня.</li>
+
+							<p>Ми готові розглядати Ваші варіанти доставки, а також підрахувати точну вартість конкретного замовлення. Для цього нам необхідно знати місто доставки, тип фотокниги(BamBook, PrintBook, PhotoBook, SlimBook), формат, кількість сторінок чи розворотів та тираж.</p> 
+
+							<p>Ми завжди раді Вам допомогти по імейлу <a href="mailto:dluxkodak@mail.ru">dluxkodak@mail.ru</a></p>
+					</div>
+				</div>
+			</div>  
+		</div>
+
+	</div>
+	
+	
+</div>
+
+
+
+
