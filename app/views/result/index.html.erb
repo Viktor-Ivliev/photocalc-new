@@ -1,10 +1,24 @@
+<% content_for :futer do %>
+
+  <li ><a class="active_menu" href="<%= result_index_path %>">Ціни</a></li>
+
+  <%= render 'landing_page/futer' %>
+  
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_delivery_path  %>">Доставка</a></li>
+<% end %>
+
+
+
 <div class="container">
   <div class="form_calculator ">
     <%= form_for :calc, url: result_calc_path do |f| %>
 
       <div class="field">
         <%= f.label "Вид фотодруку", class: "forms" %>
-        <div id="calc_photo" class="row one background_calc_element">
+        <div id="calc_photo" class="row one background_calc_element center">
           <% @pric = Price.select(:type_photo).distinct %>
           <% checkeds = true %>
           <% @pric.each do |fr| %>
@@ -56,7 +70,7 @@
 
       <div class="actions">
         <%#расчет через контроллер %>
-        <%#= f.submit "Розрахувати", remote: true %>
+        <%#= f.submit "Заказать", remote: true %>
         <!--<div class="btn btn-default dropdown-toggle" id="calculate_cost">Розрахувати</div>-->
       </div>
 
@@ -66,7 +80,11 @@
         <%= render 'calc' %>
       </div>
     </div>
-  </div>
-  
-  
+  </div> 
 </div>
+
+
+
+
+
+<!---->

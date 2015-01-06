@@ -1,2 +1,559 @@
-<h1>LandingPage#printbook</h1>
-<p>Find me in app/views/landing_page/printbook.html.erb</p>
+<% content_src_img='/assets/content_info/print_book/' %>
+
+<% content_for :futer do %>
+  <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
+  <%= render 'futer' %>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="active_menu" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_delivery_path  %>">Доставка</a></li>
+<% end %>
+
+<div class="container">
+	<div class="first_information">
+	<h2>PrintBook</h2>
+		<p>
+			Фотокнига <strong>PrintBook</strong> — це надрукована на сучасному цифровому обладнанні поліграфічним способом книга. Внутрішні листи надруковані на <strong>170 г/м</strong> крейдованому папері. Обкладинка — тверда ламінована палітурка з індивідуальним дизайном. Це найбільш популярний у світі формат фотокниг. Основною рисою фотокниги є оперативність виготовлення, унікальність її зовнішнього вигляду і доступність в <a class = "grin_links" href="<%= result_index_path %>">ціні</a>. Для кожної фотокниги Ви можете створити свій, унікальний дизайн обкладинки, форзаців і сторінок.
+		</p>
+		<img src="<%= content_src_img %>printbook1.png" class="img-thumbnail"/>
+	</div>
+	
+
+	<div class="last_information">
+		<h2 class="block-title">Формати книг</h2>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#printbook24x32" data-toggle="tab">24x32</a></li>
+		  <li><a href="#printbook30x30" data-toggle="tab">30x30</a></li>
+		  <li><a href="#printbook20x30" data-toggle="tab">20x30</a></li>
+		  <li><a href="#printbook30x20" data-toggle="tab">30x20</a></li>
+		  <li><a href="#printbook20x20" data-toggle="tab">20x20</a></li>
+		  <li><a href="#printbook15x20" data-toggle="tab">15x20</a></li>
+		  <li><a href="#printbook20x15" data-toggle="tab">20x15</a></li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane fade in active" id="printbook24x32">
+			  	<h2>Фотокнига PrintBook 24X32</h2>
+				
+				<p>Портретний формат фотокниги. За рахунок свого розміру ідеальний для випускного альбому.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>224х310 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>224х310 мм (2 форзаци)<a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>245х316 мм (в розгорнутому вигляді 475х316 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>немає</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>16/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>516х346 мм (6094x4087 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>237х316 мм (2799x3732 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th>
+							<a href="<%= content_src_img %>cover_printbook_24x32.jpg" class="highslide" onclick="return hs.expand(this)">
+								<img src="<%= content_src_img %>cover_printbook_24x32_small.jpg" alt="обкладинка фотокниги 24х32" title="обкладинка фотокниги 24х32" />
+							</a></th>
+						<th>
+							<a href="<%= content_src_img %>page_printbook_24x32.jpg" class="highslide" onclick="return hs.expand(this)">
+								<img src="<%= content_src_img %>page_printbook_24x32_small.jpg" alt="сторінка/форзац фотокниги 24х32" title="сторінка/форзац фотокниги 24х32" />
+							</a>
+						</th>
+					</tr>
+				</table>
+			</div>
+
+			<div class="tab-pane fade" id="printbook30x30">
+		  		<h2>Фотокнига PrintBook 30X30</h2>
+		  		<p>Квадратний формат фотокниги. Традиційно використовується як весільний фотоальбом.</p>
+				
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>277х284 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>277х284 мм (2 форзаци)<a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>290х290 мм (в розгорнутому вигляді 580х290 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>782x296</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>16/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 2</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>620х320 мм (7323x3780 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>290х290 мм (3425x3425 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_30x30.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_30x30_small.jpg" alt="обкладинка фотокниги 30x30" title="обкладинка фотокниги 30x30" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_30x30.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_30x30_small.jpg" alt="сторінка/форзац фотокниги 30x30" title="сторінка/форзац фотокниги 30x30" /></a></th>
+					</tr>
+				</table>
+
+			</div>
+			<div class="tab-pane fade" id="printbook20x30">
+		  		<h2>Фотокнига PrintBook 20X30</h2>
+		  		<p>Портретний формат фотокниги. Найбільш поширений і популярний формат альбому для випускного.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>201х284 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>201х284 мм (2 форзаци)           <a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>215х290 мм (в розгорнутому вигляді 410х290 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>632x296</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>12/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>470х320 мм (5551x3780 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>214х290 мм (2528x3425 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_20x30.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_20x30_small.jpg" alt="обкладинка фотокниги 20x30" title="обкладинка фотокниги 20x30" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_20x30.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_20x30_small.jpg" alt="сторінка/форзац фотокниги 20x30" title="сторінка/форзац фотокниги 20x30" /></a></th>
+					</tr>
+				</table>
+
+			</div>
+			<div class="tab-pane fade" id="printbook30x20">
+		  		<h2>Фотокнига PrintBook 30X20</h2>
+		  		<p>Горизонтальний формат фотокниги. Як правило надають перевагу випускники ВУЗів, також добре пасує для панорамних зображень.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>290х194 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>290х194 мм (2 форзаци)           <a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>309х200 мм (в розгорнутому вигляді 608х200 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>810x206</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>16/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>648х230 мм (7654x2717 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>303х200 мм (3579x2362 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_30x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_30x20_small.jpg" alt="обкладинка фотокниги 30x20" title="обкладинка фотокниги 30x20" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_30x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_30x20_small.jpg" alt="сторінка/форзац фотокниги 30x20" title="сторінка/форзац фотокниги 30x20" /></a></th>
+					</tr>
+				</table>
+			</div>
+			<div class="tab-pane fade" id="printbook20x20">
+			  	<h2>Фотокнига PrintBook 20X20</h2>
+			  	<p>Квадратний формат фотокниги. Традиційно використовується як весільний фотоальбом.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>201х201 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>201х201 мм (2 форзаци)           <a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>215х207 мм (в розгорнутому вигляді 410х290 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>немає</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>12/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>470х237 мм (5551x2799 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>214х207 мм (2528x2445 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_20x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_20x20_small.jpg" alt="обкладинка фотокниги 20x20" title="обкладинка фотокниги 20x20" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_20x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_20x20_small.jpg" alt="сторінка/форзац фотокниги 20x20" title="сторінка/форзац фотокниги 20x20" /></a></th>
+					</tr>
+				</table>
+
+			</div>
+			<div class="tab-pane fade" id="printbook15x20">
+			  	<h2>Фотокнига PrintBook 15X20</h2>
+			  	<p>Вертикальний формат фотокниги. Компактний та зручний альбом.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>144х194 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>144х194 мм (2 форзаци)           <a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>155х200 мм (в розгорнутому вигляді 305х200 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>немає</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>12/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>358х230 мм (4228x2717 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>157х200 мм (1854x2362 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_15x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_15x20_small.jpg" alt="обкладинка фотокниги 15x20" title="обкладинка фотокниги 15x20" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_15x20.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_15x20_small.jpg" alt="сторінка/форзац фотокниги 15x20" title="сторінка/форзац фотокниги 15x20" /></a></th>
+					</tr>
+				</table>
+
+			</div>
+			<div class="tab-pane fade" id="printbook20x15">
+			  	<h2>Фотокнига PrintBook 20X15</h2>
+			  	<p>Квадратний формат фотокниги. Традиційно використовується як весільний фотоальбом.</p>
+				<h3>Параметри готової книги</h3>
+				<table class="lines">
+					<tr>
+						<td>Розмір листа</td>
+						<td>201х136 мм</td>
+					</tr>
+					<tr>
+						<td>Розмір форзацу</td>
+						<td>201х136 мм (2 форзаци)           <a href="<%= content_src_img %>forzac.jpg" class="highslide" onclick="return hs.expand(this)"><strong>?</strong></a></td>
+					</tr>
+					<tr>
+						<td>Обкладинка</td>
+						<td>210х145 мм (в розгорнутому вигляді 400х145 мм)</td>
+					</tr>
+					<tr>
+						<td>Суперобкладинка</td>
+						<td>немає</td>
+					</tr>
+					<tr>
+						<td>Папір</td>
+						<td>170 г/м2</td>
+					</tr>
+		                        <tr>
+						<td>Сторінок min/max</td>
+						<td>12/96</td>
+					</tr>
+		                        <tr>
+						<td>Кратність сторінок</td>
+						<td>+ 4</td>
+					</tr>
+				</table>
+				
+
+				<h3>Вимоги до файлів для друку</h3>
+				<table class="lines">
+					<tr>
+						<td>Формат файлу</td>
+						<td>JPG (мінімальна компресія, максимальна якість)</td>
+					</tr>
+				
+					<tr>
+						<td>Колірна модель</td>
+						<td>RGB, профіль sRGB IEC61966</td>
+					</tr>
+			
+					<tr>
+						<td>Розширення</td>
+						<td>300 dpi (точок на дюйм)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл обкладинки</td>
+						<td>466х172 мм (5503x2031 пікселів)</td>
+					</tr>
+				
+					<tr>
+						<td>Файл сторінки</td>
+						<td>214х142 мм (2528x1677 пікселів)</td>
+					</tr>
+				</table>
+				
+				<h3>Схема обрізки</h3>
+				<table>
+					<tr>
+						<th><a href="<%= content_src_img %>cover_printbook_20x15.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>cover_printbook_20x15_small.jpg" alt="обкладинка фотокниги 20x15" title="обкладинка фотокниги 20x15" /></a></th>
+						<th><a href="<%= content_src_img %>page_printbook_20x15.jpg" class="highslide" onclick="return hs.expand(this)"><img src="<%= content_src_img %>page_printbook_20x15_small.jpg" alt="сторінка/форзац фотокниги 20x15" title="сторінка/форзац фотокниги 20x15" /></a></th>
+					</tr>
+				</table>
+
+			</div>
+
+		</div>
+	</div>
+</div>

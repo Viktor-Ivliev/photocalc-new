@@ -1,0 +1,4 @@
+<% if admin_signed_in? %>
+	<li><a class="not_active" href="<%= prices_path %>">Таблиці</a></li>
+	<li><a class="not_active" href="<%= admin_session_path  %>">Адміністрація</a></li>
+<% end %>

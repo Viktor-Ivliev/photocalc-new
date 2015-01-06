@@ -1,9 +1,20 @@
-<div class="container">
-<%= link_to 'адміністрація', admin_session_path %>
-  <div class="container">
-    <%= render @prices %>
-  </div>
+<% content_for :futer do %>
+  <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
+  <li><a class="active_menu" href="<%= prices_path %>">Таблиці</a></li>
+  <li><a class="not_active" href="<%= admin_session_path  %>">Адміністрація</a></li>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_delivery_path  %>">Доставка</a></li>
+<% end %>
 
-<br>
-<%= link_to 'New Price', new_price_path %>
+<div class="container">
+
+  <div class="center">
+    <% cache ['store_price', Price.latest] do %>
+      <%= render @prices %>
+    <% end %>
+  </div>
+ 
+
 </div>

@@ -1,20 +1,24 @@
- Вид фотодруку:
- <%= price.type_photo %><br>
- Формат:
- <%= price.format %><br>
- <table>
-   <thead>
-     <tr>
-       <th colspan="2" class="price_up" >Ціна від 1 до 4 включно</th>
-       <th class="splan_width"></th>
-       <th colspan="2" class="price_down">Ціна від 5 до 99 включно</th>
-     </tr>
-     <th>к-сть розворотiв</th>
-     <th><%= price.type_paper %></th>
-     <th class="splan_width"></th>
-     <th>к-сть розворотiв</th>
-     <th><%= price.type_paper %></th>
-   </thead>
+ <!--старая структура показки таблиц-->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th colspan="4">  Вид фотодруку: <%= price.type_photo %></th>
+    </tr>
+    <tr>
+      <th colspan="4"> Формат: <%= price.format %></th>
+    </tr>
+    <tr>
+      <th colspan="2" class="price_up" >Ціна від 1-4</th>
+      <th class="splan_width"></th>
+      <th colspan="2" class="price_down">Ціна від 5-99</th>
+    </tr>
+    <th>к-сть розворотiв</th>
+    <th><%= price.type_paper %></th>
+    <th class="splan_width"></th>
+    <th>к-сть розворотiв</th>
+    <th><%= price.type_paper %></th>
+  </thead>
 
    <tbody>
      <% i=price.min_num_pages %>
@@ -38,3 +42,51 @@
  </table>
  <br>
  <br>
+
+
+<!--новая структура показки таблиц-->
+<!--потом можно переделать под себя как надо-->
+ <% @printing_type.each do |printing_type| %>
+  <% formats = @format.where(printing_type_id: printing_type.id) %> 
+    <% formats.each do |format| %>
+      <% editions = @edition.where(format_id: format.id) %>
+      <% editions.each do |edition| %>
+        <% edition_options = @edition_options.where(edition_id: edition.id) %>
+        <% edition_options.each do |edition_option| %>
+            <% pric = edition_option.price%>
+            <div>Вид фотодруку: <%= printing_type.title %></div>
+            <div><%= printing_type.photo %></div>
+            <div>Формат: <%= pformat.title %></div>
+            <div><%= format.photo %></div>
+            <table>
+            <thead>
+              <tr>
+                <th colspan="2" class="price_up" >Ціна від <%= edition.min_edition %> до <%= edition.min_edition %></th>
+              </tr>
+              <th>к-сть розворотiв</th>
+              <th><%= edition_option.paper_option %></th>
+            </thead>
+            <tbody>
+
+              <% (edition.min_pages..edition.max_pages).step(edition.step).each do |i| %>
+              <tr>
+                <td class="center"><%= i %></td>
+                <td class="center"><%= sprintf("%0.02f грн.", pric)
+                  %>
+                </td>
+              </tr>
+                <% pric+=edition_option.difference %>
+              <% end %>
+            
+              </tbody>
+            </table>
+            <br>
+            <br>
+            
+        <% end %>
+
+      <% end %>
+
+    <% end %>
+
+<% end %>

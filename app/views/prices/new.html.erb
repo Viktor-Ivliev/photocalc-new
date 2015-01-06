@@ -1,52 +1,66 @@
-<div class="container">
-<%= link_to "Вихід", destroy_admin_session_path, :method => :delete, :class  => "btn btn-default dropdown-toggle", :data => "dropdown" %>
-
-<%= link_to 'Назад', prices_path %>
-
-<% @order_dates.each do |order_date| %>
-      <tr>
-        <td><%= order_date.info %></td>
-        <td><%= order_date.date %></td>
-        <td><%= link_to 'Змінити', edit_order_date_path(order_date) %></td>
-      </tr>
+<% content_for :futer do %>
+  <li ><a class="not_active" href="<%= result_index_path %>">Ціни</a></li>
+  <li><a class="not_active" href="<%= prices_path %>">Таблиці</a></li>
+  <li><a class="active_menu" href="<%= admin_session_path  %>">Адміністрація</a></li>
+  <li><a class="not_active" href="<%= landing_page_photobook_path  %>">Photobook</a></li>
+  <li><a class="not_active" href="<%= landing_page_printbook_path  %>">Printbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_slimbook_path  %>">Slimbook</a></li>
+  <li><a class="not_active" href="<%= landing_page_delivery_path  %>">Доставка</a></li>
 <% end %>
 
-<p>админ</p>
 
-<table>
+<div class="container">
+
+
+  <div class="editing_dashboard">
+
+    <% @order_dates.each do |order_date| %>
+      <%= order_date.info %>
+      <%= order_date.date %>
+      <%= link_to '', edit_order_date_path(order_date), class: "font-size-glyphicon glyphicon glyphicon-pencil" %> 
+    <% end %>
+
+  </div>
+
+<table class="table table-hover font_table_futer">
   <thead>
     <tr>
-      <th>Вид фотодруку</th>
+      <th>Вид</th>
       <th>Тип паперу</th>
       <th>Формат</th>
-      <th>Мінімальна кільк розворо</th>
-      <th>Максимальна кільк розвор</th>
+      <th>Мін розв</th>
+      <th>Макс розв</th>
       <th>Крок</th>
-      <th>Ціна від 1 до 4 включно</th>
-      <th>Різниця цін від 1 до 4</th>
-      <th>Ціна від 5 до 99 включно</th>
-      <th>Різниця цін від 5 до 99</th>
-      
+      <th>Ціна 1-4 </th>
+      <th>Різниця</th>
+      <th>Ціна 5-99 </th>
+      <th>Різниця</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @prices.each do |price| %>
-      <tr>
-        <td><%= price.type_photo %></td>
-        <td><%= price.type_paper %></td>
-        <td><%= price.format %></td>
-        <td><%= price.min_num_pages %></td>
-        <td><%= price.max_num_pages %></td>
-        <td><%= price.step_pages %></td>
-        <td><%= price.price1_4 %></td>
-        <td><%= price.difference1_4 %></td>
-        <td><%= price.price5_99 %></td>
-        <td><%= price.difference5_99 %></td>
-        <!--<td><%#= link_to 'Show', price %></td>-->
-        <td><%= link_to 'Змінити', edit_price_path(price) %></td>
-        <td><%= link_to 'Видалити', price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+  <% cache ['store', Price.latest] do %>
+      <% @prices.each do |price| %>
+        <% cache ['entry', price] do %>
+          <tr class="color_table <%#= cycle('list_line_odd', 'list_line_even') %>"
+    >
+            <td><%= price.type_photo %></td>
+            <td><%= price.type_paper %></td>
+            <td><%= price.format %></td>
+            <td><%= price.min_num_pages %></td>
+            <td><%= price.max_num_pages %></td>
+            <td><%= price.step_pages %></td>
+            <td><%= price.price1_4 %></td>
+            <td><%= price.difference1_4 %></td>
+            <td><%= price.price5_99 %></td>
+            <td><%= price.difference5_99 %></td>
+            <td><%= link_to '',edit_price_path(price), class: "font-size-glyphicon glyphicon glyphicon-pencil" %></td>
+            <td><%= link_to '', price, method: :delete, data: { confirm: 'Are you sure?'  }, class: "font-size-glyphicon icon-trash" %></td>
+          </tr>
+         <% end %> 
+      <% end %>
     <% end %>
   </tbody>
 </table>

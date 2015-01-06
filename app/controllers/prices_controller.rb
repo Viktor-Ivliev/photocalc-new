@@ -4,6 +4,11 @@ class PricesController < ApplicationController
   # GET /prices
   def index
     @prices = Price.all
+    @format = Format.all
+    @printing_type = PrintingType.all
+    @edition = Edition.all
+    @edition_option = EditionOption.all
+    @order_dates = OrderDate.all
   end
 
   # GET /prices/1
@@ -17,6 +22,7 @@ class PricesController < ApplicationController
     if admin_signed_in?
       @prices = Price.all.order(:type_photo)
       @price = Price.new
+
     else
       redirect_to prices_path
     end
@@ -31,6 +37,9 @@ class PricesController < ApplicationController
     @price = Price.new(price_params)
 
     if @price.save
+      # f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+      # f.puts(" ")
+      f.close 
       redirect_to @price, notice: 'Price was successfully created.'
     else
       render :new
@@ -49,6 +58,9 @@ class PricesController < ApplicationController
   # DELETE /prices/1
   def destroy
     @price.destroy
+    f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+    f.puts(" ")
+    f.close
     redirect_to prices_url, notice: 'Price was successfully destroyed.'
   end
 

@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource_or_scope)#forwards to this page after completing the form
     new_price_path
   end
+  @order_dates = OrderDate.all
 end

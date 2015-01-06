@@ -5,42 +5,55 @@ class ResultController < ApplicationController
   end
 
 	def calc
+    #calc[:photo]
 
-		calc = params[:calc]
-
-    @result = Price.where(type_photo: calc[:photo]).where(type_paper: calc[:paper]).where(format: calc[:format])
-    
-    #реализация расчета цены
-
-    @num_pages = calc[:number_of_turns].to_i#кол - разваротов
-    @number_copies = calc[:number].to_i#тираж
-    @result.each do |result|
-
-      if @number_copies < 5
-          if  @num_pages == result.min_num_pages
-            @Price_calc = result.price1_4
-          else
-             @Price_calc = result.price1_4 + result.difference1_4 * (@num_pages - result.min_num_pages)
-          end
-      else
-          if  @num_pages == result.min_num_pages
-            @Price_calc = result.price5_99
-          else
-             @Price_calc = result.price5_99 + result.difference5_99 * (@num_pages - result.min_num_pages)
-          end
-      end
-      @Price_all = 0
-      @Price_all = @Price_calc * @number_copies
-    end
-
-		render :index
+		#render :index
 	end
 
-  def show
+
+  def select_an_item_1
+    @price_format = Price.where("type_photo = '#{params[:type_photo]}'").select(:format).order(:format).reverse_order.distinct
+    respond_to do |format|
+      format.json{ render json:  @price_format}
+    end
   end
+
+
+
+  def select_an_item_2
+    @price_type_paper = Price.where("type_photo = '#{params[:type_photo]}'").where("format = '#{params[:form]}'").select(:type_paper).order(:type_paper).reverse_order.distinct
+    respond_to do |format|
+      format.html
+      format.json{ render json: @price_type_paper}
+    end
+  end
+
+  def select_an_item_price
+    @price_select= Price.where("type_photo = '#{params[:type_photo]}'").where("format = '#{params[:form]}'").where("type_paper = '#{params[:type_paper]}'").select(:max_num_pages, :step_pages,:min_num_pages, :price1_4, :difference1_4, :price5_99, :difference5_99)
+    respond_to do |format|
+      format.html
+      format.json{ render json: @price = { price: @price_select }}
+    end
+  end
+
+  def show
+    respond_to do |format|
+      format.html
+      format.json{ render json:  @pric = Price.all}
+       
+        @pric = Price.select(:format, :type_photo).order(:format).reverse_order
+    end
+  end
+
 
   def res
     redirect_to result_index_path
   end
+
+
+
+  
+
+
 
 end
