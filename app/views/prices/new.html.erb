@@ -41,23 +41,26 @@
   </thead>
 
   <tbody>
-    <% @prices.each do |price| %>
-      <tr class="color_table <%#= cycle('list_line_odd', 'list_line_even') %>"
->
-        <td><%= price.type_photo %></td>
-        <td><%= price.type_paper %></td>
-        <td><%= price.format %></td>
-        <td><%= price.min_num_pages %></td>
-        <td><%= price.max_num_pages %></td>
-        <td><%= price.step_pages %></td>
-        <td><%= price.price1_4 %></td>
-        <td><%= price.difference1_4 %></td>
-        <td><%= price.price5_99 %></td>
-        <td><%= price.difference5_99 %></td>
-        <!--<td><%#= link_to 'Show', price %></td>-->
-        <td><%= link_to '',edit_price_path(price), class: "font-size-glyphicon glyphicon glyphicon-pencil" %></td>
-        <td><%= link_to '', price, method: :delete, data: { confirm: 'Are you sure?'  }, class: "font-size-glyphicon icon-trash" %></td>
-      </tr>
+  <% cache ['store', Price.latest] do %>
+      <% @prices.each do |price| %>
+        <% cache ['entry', price] do %>
+          <tr class="color_table <%#= cycle('list_line_odd', 'list_line_even') %>"
+    >
+            <td><%= price.type_photo %></td>
+            <td><%= price.type_paper %></td>
+            <td><%= price.format %></td>
+            <td><%= price.min_num_pages %></td>
+            <td><%= price.max_num_pages %></td>
+            <td><%= price.step_pages %></td>
+            <td><%= price.price1_4 %></td>
+            <td><%= price.difference1_4 %></td>
+            <td><%= price.price5_99 %></td>
+            <td><%= price.difference5_99 %></td>
+            <td><%= link_to '',edit_price_path(price), class: "font-size-glyphicon glyphicon glyphicon-pencil" %></td>
+            <td><%= link_to '', price, method: :delete, data: { confirm: 'Are you sure?'  }, class: "font-size-glyphicon icon-trash" %></td>
+          </tr>
+         <% end %> 
+      <% end %>
     <% end %>
   </tbody>
 </table>

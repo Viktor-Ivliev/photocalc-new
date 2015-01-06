@@ -18,7 +18,7 @@
 
       <div class="field">
         <%= f.label "Вид фотодруку", class: "forms" %>
-        <div id="calc_photo" class="row one background_calc_element">
+        <div id="calc_photo" class="row one background_calc_element center">
           <% @pric = Price.select(:type_photo).distinct %>
           <% checkeds = true %>
           <% @pric.each do |fr| %>

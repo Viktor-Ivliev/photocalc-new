@@ -37,8 +37,8 @@ class PricesController < ApplicationController
     @price = Price.new(price_params)
 
     if @price.save
-      f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
-      f.puts(" ")
+      # f = File.open(Rails.root.join('app/assets/javascripts/result.coffee.erb'), 'a')
+      # f.puts(" ")
       f.close 
       redirect_to @price, notice: 'Price was successfully created.'
     else

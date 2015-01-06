@@ -50,9 +50,9 @@
   	}
 } 
 
-#calc_photo{
+/*#calc_photo{
 	height: 170px;
-}
+}*/
 
 
 .format_label, .photo_label, .paper_label, .number_of_turns_label, .field_number_label{
@@ -74,7 +74,21 @@
 
 }
 
+
 .photo_label{
+	margin: 10px 3%;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 900;
+	.photo_img{
+		min-height: 16.5%;
+		max-width: 95%;
+		/*max-height: 16%;*/
+	}
+}
+
+
+/*.photo_label{
 	margin: 10px auto 10px;
 	width: 25%;
 	height: 140px;
@@ -86,7 +100,7 @@
 	.photo_img{
 		height: 110px;
 	}
-}
+}*/
 
 .paper_label{
 	display: inline-block;

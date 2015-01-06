@@ -1,4 +1,10 @@
 class Price < ActiveRecord::Base
+
+def self.latest
+	Price.order(:updated_at).last
+end
+
+
 end
 
 # == Schema Information
